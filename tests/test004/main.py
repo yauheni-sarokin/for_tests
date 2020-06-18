@@ -7,3 +7,5 @@ Abstract factory
 print('hello')
 
 print('how are you')
+
+print('fine thank')
