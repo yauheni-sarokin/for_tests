@@ -30,4 +30,3 @@ y = DoMu142(10)
 
 print(x.do_something())
 print(y.do_something())
-
