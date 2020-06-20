@@ -12,3 +12,16 @@ https://www.datacamp.com/community/tutorials/python-metaclasses?utm_source=adwor
 this after
 https://codesachin.wordpress.com/2016/06/09/the-magic-behind-attribute-access-in-python/
 """
+
+class MyMeta(type):
+    pass
+
+class MyClass(metaclass=MyMeta):
+    pass
+
+class MySubclass(MyClass):
+    pass
+
+print(type(MyMeta))
+print(type(MyClass))
+print(type(MySubclass))
