@@ -4,6 +4,7 @@ new behaviors to objects dynamically by placing them
 inside special wrapper objects.
 """
 
+
 class Component():
     """
     Базовый интерфейс Компонента определяет поведение, которое изменяется
@@ -13,6 +14,7 @@ class Component():
     def operation(self) -> str:
         pass
 
+
 class ConcreteComponent(Component):
     """
     Конкретные Компоненты предоставляют реализации поведения по умолчанию. Может
@@ -21,6 +23,7 @@ class ConcreteComponent(Component):
 
     def operation(self) -> str:
         return "ConcreteComponent"
+
 
 class Decorator(Component):
     """
@@ -46,7 +49,8 @@ class Decorator(Component):
         return self._component
 
     def operation(self) -> str:
-        return  self._component.operation()
+        return self._component.operation()
+
 
 class ConcreteDecoratorA(Decorator):
     """
@@ -64,6 +68,7 @@ class ConcreteDecoratorA(Decorator):
 
         return f"ConcreteDecoratorA({self.component.operation()})"
 
+
 class ConcreteDecoratorB(Decorator):
     """
     Декораторы могут выполнять своё поведение до или после вызова обёрнутого
@@ -72,6 +77,7 @@ class ConcreteDecoratorB(Decorator):
 
     def operation(self) -> str:
         return f"ConcreteDecoratorB({self.component.operation()})"
+
 
 def client_code(component: Component) -> None:
     """
@@ -84,8 +90,8 @@ def client_code(component: Component) -> None:
 
     print(f"RESILT: {component.operation()}", end="")
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     # Таким образом, клиентский код может поддерживать как простые компоненты...
     simple = ConcreteComponent()
     print("Client: I've got a simple component:")

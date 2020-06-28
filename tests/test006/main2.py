@@ -6,7 +6,7 @@ Property
 
 class Property:
     def __init__(self, var) -> None:
-        self.a = var
+        self.__a = var
 
     @property
     def a(self):
