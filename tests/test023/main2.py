@@ -2,7 +2,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 
 
-class Context(ABC):
+class Context():
     """
     Контекст определяет интерфейс, представляющий интерес для клиентов. Он также
     хранит ссылку на экземпляр подкласса Состояния, который отображает текущее
